@@ -51,6 +51,10 @@ img{
     background: linear-gradient(to right, var(--light-violet), var(--darker-violet));
     color: var(--platinum-color);
     height: 70px;
+    z-index: 100;
+    width: 100%;
+    position: sticky;
+    top: 0;
 }
 
 .container.flex{
@@ -80,28 +84,16 @@ img{
 .showcase{
     height: 400px;
     background: linear-gradient(to right , var(--light-violet), var(--darker-violet));
-    position: relative;
     color: var(--platinum-color);
-}
-
-.showcase::before, .showcase::after{
-    content: "";
-    position: absolute;
-    height: 100px;
-    bottom: -70px;
-    right: 0;
-    left: 0;
-    background: #fff;
-    transform: skewY(-3deg);
 }
 
 .showcase-form{
     position: relative;
-    top: 60px;
+    top: 70px;
     height: 350px;
     width: 400px;
     padding: 40px;
-    z-index: 100;
+    z-index: 1;
     justify-self: flex-end;
 }
 
