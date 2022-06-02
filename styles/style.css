@@ -11,7 +11,9 @@
 :root{
     --raisin-black: #212633;
     --light-violet: #8b5cf6;
+    --darker-violet: #4c1d95;
     --platinum-color: #E7E8EC;
+    --pale-grey: #C0C0C0;
 }
 
 body{
@@ -46,19 +48,22 @@ img{
 /* navbar */
 
 .navbar{
-    background: var(--light-violet);
+    background: linear-gradient(to right, var(--light-violet), var(--darker-violet));
     color: var(--platinum-color);
     height: 70px;
+}
+
+.container.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
 }
 
 .container{
     max-width: 1100px;
     margin: auto;
     padding: 0 40px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100%;
 }
 
 .container nav > ul > li {
@@ -69,4 +74,108 @@ img{
 
 .container nav > ul > li a{
     color: var(--platinum-color);
+    padding-bottom: 5px;
+}
+
+.navbar a:hover{
+    border-bottom: 2px solid var(--platinum-color);
+}
+
+/* Showcase section */
+
+.showcase{
+    height: 400px;
+    background: linear-gradient(to right , var(--light-violet), var(--darker-violet));
+    position: relative;
+    color: var(--platinum-color);
+}
+
+.showcase::before, .showcase::after{
+    content: "";
+    position: absolute;
+    height: 100px;
+    bottom: -70px;
+    right: 0;
+    left: 0;
+    background: #fff;
+    transform: skewY(-3deg);
+}
+
+.showcase-form{
+    position: relative;
+    top: 60px;
+    height: 350px;
+    width: 400px;
+    padding: 40px;
+    z-index: 100;
+    justify-self: flex-end;
+}
+
+.showcase-form .form-control{
+    margin: 30px 0;
+}
+
+.showcase-form input{
+    background: var(--platinum-color);
+    border: none;
+    border-bottom: 2px solid var(--pale-grey);
+    width: 100%;
+    padding: 3px;
+    font-size: 1rem;
+    color: var(--raisin-black);
+}
+
+.showcase-form input:focus, .showcase-form input:active{
+    outline: none;
+    border-bottom: 2px solid var(--raisin-black);
+}
+
+.showcase p{
+    margin: 20px 0;
+}
+
+.showcase h1{
+    font-size: 2.5rem ;
+}
+
+.showcase .grid{
+    grid-template-columns: 55% 45%;
+    gap: 30px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-items: center;
+    height: 100%;
+}
+
+.card{
+    background: var(--platinum-color);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    padding: 20px;
+    margin: 10px;
+    color: var(--raisin-black);
+}
+
+.btn{
+    display: inline-block;
+    padding: 10px 30px;
+    cursor: pointer;
+    background: var(--light-violet);
+    border: none;
+    color: var(--platinum-color);
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+
+.btn:hover{
+   opacity: 0.7;
+}
+
+.btn-outline{
+    background-color: transparent;
+    border: 1px solid var(--platinum-color);
 }
