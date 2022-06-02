@@ -135,10 +135,64 @@ img{
     padding-top: 100px;
 }
 
-.grid.grid-3{
-    grid-template-columns: repeat(3, 1fr);
-}
-
 .stats p{
     margin-top: 0;
+}
+
+.stats-header.text-center{
+    max-width: 700px;
+    margin: auto;
+}
+
+.stats .grid h3{
+    font-size: 2rem;
+}
+
+.stats .grid p{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* testimonies */
+
+.testimonials .container{
+    max-width: 1300px;
+}
+
+.testimonials h1{
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 40px 0;
+}
+
+.testimony{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimony p{
+    max-width: 75%;
+    margin: auto;
+    padding-bottom: 8px;
+}
+
+.testimony h4{
+    max-width: 75%;
+    margin: auto;
+    border-top: 1px solid var(--pale-grey);
+    align-self: flex;
+}
+
+.customer-image{
+    width: 200px;
+    border-radius: 50%;
+    border: 2px solid var(--light-violet);
+    transition: 0.5s all;
+    cursor: pointer;
+}
+
+.customer-image:hover{
+    transform: scale(1.1);
 }

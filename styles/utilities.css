@@ -12,6 +12,13 @@
     height: 100%;
 }
 
+.grid-3{
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    gap: 20px;
+}
+
+
 .card{
     background: var(--platinum-color);
     border-radius: 10px;
