@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* base styles and soft reset */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --raisin-black: #212633;
+    --light-violet: #8b5cf6;
+    --platinum-color: #E7E8EC;
+}
+
+body{
+    font-family: "Quicksand", sans-serif, sans-serif;
+    line-height: 1.6;
+    color: var(--raisin-black);
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--raisin-black);
+}
+
+h1, h2{
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+p{
+    margin: 10px 0;
+}
+
+img{
+    width: 100%;
+}
+
+/* navbar */
+
+.navbar{
+    background: var(--light-violet);
+    color: var(--platinum-color);
+    height: 70px;
+}
+
+.container{
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.container nav > ul > li {
+    display: inline-block;
+    padding: 0 10px;
+    color: var(--platinum-color);
+}
+
+.container nav > ul > li a{
+    color: var(--platinum-color);
+}
